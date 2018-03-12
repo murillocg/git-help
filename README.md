@@ -1,7 +1,7 @@
 # Dicas para uso do git
 
 
-* Fiz pull e deu conflito e quero desfazer o pull;
+* Fiz pull, deu conflito no merge e quero desfazer o pull (para excluir a branch local);
 ````
 git merge --abort
 ````
@@ -13,3 +13,10 @@ git branch -D 'branch_name'
 ````
 git fetch upstream <branch_remota>:<branch_local>
 ````
+* Baixar pull request para teste local
+````
+git fetch origin pull/<id>/head:<branch_local>
+git checkout <branch_local>
+````
+
+
