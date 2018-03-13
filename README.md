@@ -15,8 +15,11 @@ git fetch upstream <branch_remota>:<branch_local>
 ````
 * Baixar pull request para teste local
 ````
-git fetch origin pull/<id>/head:<branch_local>
+git fetch upstream pull/<id>/head:<branch_local>
 git checkout <branch_local>
 ````
-
+* Atualizar branch local com código do pull request
+````
+git pull upstream pull/<id>/head
+````
 
