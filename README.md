@@ -9,6 +9,10 @@ git merge --abort
 ````
 git branch -D 'branch_name'
 ````
+* Adicionar repositório remoto
+````
+git remote add upstream <url_do_repositorio_remoto>
+````
 * Criar branch local a partir da remota
 ````
 git fetch upstream <branch_remota>:<branch_local>
