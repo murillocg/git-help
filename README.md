@@ -38,3 +38,9 @@ git checkout <branch_local>
 git pull upstream pull/<id>/head
 ```
 
+#### Desfazer último commit não enviado (feito na branch errada, por exemplo)
+
+```sh
+git reset HEAD~1
+```
+
