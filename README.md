@@ -13,6 +13,12 @@ git merge --abort
 git branch -D 'branch_name'
 ```
 
+#### Remover branch remota
+
+```sh
+git push origin --delete 'branch_name'
+```
+
 #### Adicionar repositório remoto
 
 ```sh
