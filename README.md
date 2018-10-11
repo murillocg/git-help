@@ -50,3 +50,10 @@ git pull upstream pull/<id>/head
 git reset HEAD~1
 ```
 
+#### Remover arquivos adicionados posteriormente ao .gitignore
+
+```sh
+git rm -r --cached . 
+git add .
+git commit -am "Remove ignored files"
+```
