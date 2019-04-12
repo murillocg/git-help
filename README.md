@@ -57,3 +57,9 @@ git rm -r --cached .
 git add .
 git commit -am "Remove ignored files"
 ```
+
+### Exportar projeto para zip (considerando arquivos ignorados, builds, logs, etc)
+
+```sh
+git archive --format zip --output <nome_arquivo>.zip master
+```
