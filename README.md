@@ -1,7 +1,16 @@
 # Dicas para uso do git
 
+#### Tenho um arquivo local alterado que não deve ir para o commit por enquanto
 
-#### Fiz pull, deu conflito no merge e quero desfazer o pull (para excluir a branch local);
+```sh
+git update-index --assume-unchanged config/database.yml
+```
+* Para desfazer essa configuração:
+```sh
+git update-index --no-assume-unchanged config/database.yml
+```
+
+#### Fiz pull, deu conflito no merge e quero desfazer o pull (para excluir a branch local)
 
 ```sh
 git merge --abort
