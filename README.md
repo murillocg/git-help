@@ -1,5 +1,10 @@
 # Dicas para uso do git
 
+#### Quero forçar um commit sem alteração para disparar o build do pipeline
+```sh
+git commit --allow-empty -m "Trigger Build"
+```
+
 #### Tenho um arquivo local alterado que não deve ir para o commit por enquanto
 
 ```sh
