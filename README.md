@@ -1,5 +1,12 @@
 # Dicas para uso do git
 
+#### Quero fazer um commit no PR de um colega que saiu de férias
+```
+git remote add meucolega https://github.com/meucolega/projeto.git
+git push meucolega pr-449:{nome da branch dele - branch remota}
+
+```
+
 #### Quero forçar um commit sem alteração para disparar o build do pipeline
 ```sh
 git commit --allow-empty -m "Trigger Build"
