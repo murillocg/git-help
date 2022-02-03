@@ -4,7 +4,6 @@
 ```
 git remote add meucolega https://github.com/meucolega/projeto.git
 git push meucolega pr-449:{nome da branch dele - branch remota}
-
 ```
 
 #### Quero forçar um commit sem alteração para disparar o build do pipeline
