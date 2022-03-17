@@ -1,76 +1,76 @@
-# Dicas para uso do git
+# Git Help - Tips for using
 
-#### Quero fazer um commit no PR de um colega que saiu de férias
+#### I want to commit to the PR of a colleague who went on vacation
 ```
-git remote add meucolega https://github.com/meucolega/projeto.git
-git push meucolega pr-449:{nome da branch dele - branch remota}
+git remote add mycolleague https://github.com/mycolleague/project.git
+git push mycolleague pr-449:{his branch name - remote branch}
 ```
 
-#### Quero forçar um commit sem alteração para disparar o build do pipeline
+#### I want to force a commit without change to trigger the pipeline build
 ```sh
 git commit --allow-empty -m "Trigger Build"
 ```
 
-#### Tenho um arquivo local alterado que não deve ir para o commit por enquanto
+#### I have a changed local file that shouldn't be committed for now
 
 ```sh
 git update-index --assume-unchanged config/database.yml
 ```
-* Para desfazer essa configuração:
+* To undo this setting:
 ```sh
 git update-index --no-assume-unchanged config/database.yml
 ```
 
-#### Fiz pull, deu conflito no merge e quero desfazer o pull (para excluir a branch local)
+#### I pulled the code, there was a conflict in the merge and I want to undo the pull (to delete the local branch)
 
 ```sh
 git merge --abort
 ```
 
-#### Remover branch local
+#### Remove local branch
 
 ```sh
 git branch -D 'branch_name'
 ```
 
-#### Remover branch remota
+#### Remove remote branch
 
 ```sh
 git push origin --delete 'branch_name'
 ```
 
-#### Adicionar repositório remoto
+#### Add remote repository
 
 ```sh
-git remote add upstream <url_do_repositorio_remoto>
+git remote add upstream <remote_reporitory_url>
 ```
 
-#### Criar branch local a partir da remota
+#### Create local branch from remote
 
 ```sh
-git fetch upstream <branch_remota>:<branch_local>
+git fetch upstream <remote_branch>:<local_branch>
 ```
 
-#### Baixar pull request para teste local
+#### Download pull request for local testing
 
 ```sh
-git fetch upstream pull/<id>/head:<branch_local>
-git checkout <branch_local>
+git fetch upstream pull/<id>/head:<local_branch>
+git checkout <local_branch>
 ```
 
-#### Atualizar branch local com código do pull request
+#### Update local branch with code from pull request
 
 ```sh
 git pull upstream pull/<id>/head
 ```
 
-#### Desfazer último commit não enviado (feito na branch errada, por exemplo)
+#### Undo last unsent commit (done on wrong branch, for example)
 
 ```sh
 git reset HEAD~1
 ```
 
-#### Remover arquivos adicionados posteriormente ao .gitignore
+#### Remove files later added to .gitignore
 
 ```sh
 git rm -r --cached . 
@@ -88,8 +88,8 @@ git add .
 git commit
 ```
 
-### Exportar projeto para zip (considerando arquivos ignorados, builds, logs, etc)
+### Export project to zip (taking into account ingored files such as builds, logs, etc)
 
 ```sh
-git archive --format zip --output <nome_arquivo>.zip master
+git archive --format zip --output <file_name>.zip master
 ```
