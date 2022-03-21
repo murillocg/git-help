@@ -88,7 +88,7 @@ git add .
 git commit
 ```
 
-### Export project to zip (taking into account ingored files such as builds, logs, etc)
+### Export project to zip (taking into account ignored files such as builds, logs, etc)
 
 ```sh
 git archive --format zip --output <file_name>.zip master
