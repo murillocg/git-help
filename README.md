@@ -27,6 +27,16 @@ git update-index --no-assume-unchanged config/database.yml
 git merge --abort
 ```
 
+#### I have made some local changes in a branch and want to transfer that to another branch, before commit them
+
+Use `git stash` when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the `HEAD` commit.
+
+```sh
+git stash
+git checkout another-branch
+git stash --apply
+```
+
 #### Remove local branch
 
 ```sh
