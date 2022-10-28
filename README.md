@@ -88,9 +88,9 @@ git add .
 git commit -am "Remove ignored files"
 ```
 
-### Integrar código de um commit/branch em outra branch
-* descobrir o hash do commit com git log
-* ir para branch onde deseja integrar o código
+#### Apply the changes introduced by some existing commits
+* Find the commit hash with git log command
+* Go to the desired branch to do this commit
 
 ```sh
 git cherry-pick <hash_commit>
@@ -98,7 +98,7 @@ git add .
 git commit
 ```
 
-### Export project to zip (taking into account ignored files such as builds, logs, etc)
+#### Export project to zip (taking into account ignored files such as builds, logs, etc)
 
 ```sh
 git archive --format zip --output <file_name>.zip master
